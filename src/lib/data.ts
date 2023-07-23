@@ -7,7 +7,7 @@ export const tasks: Task[] = [
     expectedTimeToFinish: 120,
     isCompleted: true,
     priority: 'HIGH',
-    date: '22/7/2023',
+    date: '23/7/2023',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const tasks: Task[] = [
     expectedTimeToFinish: 60,
     isCompleted: false,
     priority: 'HIGH',
-    date: '22/7/2023',
+    date: '23/7/2023',
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const tasks: Task[] = [
     expectedTimeToFinish: 30,
     isCompleted: false,
     priority: 'MEDIUM',
-    date: '22/7/2023',
+    date: '24/7/2023',
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const tasks: Task[] = [
     expectedTimeToFinish: 30,
     isCompleted: false,
     priority: 'MEDIUM',
-    date: '22/7/2023',
+    date: '24/7/2023',
   },
   {
     id: 6,
@@ -47,6 +47,6 @@ export const tasks: Task[] = [
     expectedTimeToFinish: 60,
     isCompleted: false,
     priority: 'LOW',
-    date: '22/7/2023',
+    date: '23/7/2023',
   },
 ];
