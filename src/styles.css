@@ -2,12 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --primary-color: #7374ec;
+    --primary-light-color: #ededf6;
+    --primary-lighter-color: #f2f4f6;
+
+    --high-priority-color: #fe6d6e;
+    --high-priority-light-color: #fff1f1;
+
+    --medium-priority-color: #febb6d;
+    --medium-priority-light-color: #fff5eb;
+
+    --low-priority-color: #00b372;
+    --low-priority-light-color: #e9ffef;
+  }
+}
+
 button {
   @apply select-none text-sm;
 }
 
 .button-primary {
-  @apply bg-primary-light hover:bg-[#E4E4F6] transition-colors duration-200;
+  @apply text-primary bg-primary-light hover:bg-[#E4E4F6] transition-colors duration-200;
 }
 
 @keyframes dialog-overlay-show {
@@ -47,5 +64,49 @@ button {
   to {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.95);
+  }
+}
+
+@keyframes side-menu-animate-in {
+  from {
+    transform: translateX(-50%);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes main-area-header-item-animate-in {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-card-animate-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-card-animate-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
   }
 }

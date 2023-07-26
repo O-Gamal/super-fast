@@ -7,16 +7,26 @@ export default {
         sans: ['Poppins', 'sans-serif'],
       },
       boxShadow: {
-        primary: '0px 15px 30px -20px rgba(0, 0, 0, 0.05)',
+        shadow: '0px 15px 30px -20px rgba(0, 0, 0, 0.05)',
       },
       colors: {
         primary: {
-          default: '#7374EC',
-          light: '#EDEDF6',
+          DEFAULT: 'var(--primary-color)',
+          light: 'var(--primary-light-color)',
+          lighter: 'var(--primary-lighter-color)',
         },
-        'high-priority': '#FE6D6E',
-        'medium-priority': '#FFA447',
-        'low-priority': '#1ECCC3',
+        'high-priority': {
+          DEFAULT: 'var(--high-priority-color)',
+          light: 'var(--high-priority-light-color)',
+        },
+        'medium-priority': {
+          DEFAULT: 'var(--medium-priority-color)',
+          light: 'var(--medium-priority-light-color)',
+        },
+        'low-priority': {
+          DEFAULT: 'var(--low-priority-color)',
+          light: 'var(--low-priority-light-color)',
+        },
       },
       keyframes: {
         slideDown: {

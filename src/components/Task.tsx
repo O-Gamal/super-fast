@@ -11,7 +11,7 @@ const TaskItem = ({ title, expectedTimeToFinish, priority }: TaskItemProps) => {
       <div className='flex items-center gap-4'>
         <div
           className={cn(
-            `w-2.5 h-2.5 rounded-full cursor-pointer ring-1`,
+            `w-2.5 h-2.5 rounded cursor-pointer ring-1`,
             priority === 'high'
               ? 'ring-high-priority hover:bg-high-priority/10'
               : priority === 'medium'

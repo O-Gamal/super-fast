@@ -26,19 +26,19 @@ const Nav = ({ navElements, activeTab }: NavProps) => {
               className={cn(
                 'flex items-center justify-between p-3 rounded-md cursor-pointer ring-gray-200',
                 activeTab === navElement.route
-                  ? 'bg-[#EDEDF6] text-[#7374EC]'
-                  : 'hover:ring-1 text-[#AAAAAE]'
+                  ? 'bg-primary-light text-primary'
+                  : 'hover:ring-1 text-gray-400'
               )}
             >
               <div className='flex items-center gap-2'>
                 <div>{navElement.icon}</div>
-                <h2 className={'text-sm font-medium'}>{navElement.title}</h2>
+                <h2 className={'text-sm'}>{navElement.title}</h2>
               </div>
               <div className='flex justify-between'>
                 <p
                   className={cn(
-                    'text-xs bg-[#E9E9F0] w-6 h-6 flex items-center justify-center rounded text-[#AAAAAE]',
-                    activeTab === navElement.route && 'text-[#7374EC] bg-white'
+                    'text-xs bg-gray-200 w-6 h-6 flex items-center justify-center rounded text-gray-400',
+                    activeTab === navElement.route && 'text-primary bg-white'
                   )}
                 >
                   {navElement.id}

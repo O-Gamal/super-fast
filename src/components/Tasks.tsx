@@ -1,6 +1,8 @@
 import { Task } from '@/types/task';
-import ToggleList from './ToggleList';
 import TaskItem from './Task';
+import { Fragment } from 'react';
+import ToggleList from './ui/ToggleList';
+import { cn } from '@/lib/utils';
 
 interface TasksProps {
   tasks: Task[];
@@ -27,10 +29,17 @@ const Tasks = ({ tasks }: TasksProps) => {
   return (
     <ToggleList type='multiple' defaultValue={['high', 'medium', 'low']}>
       {lists.map((list) => (
-        <>
+        <Fragment key={list.priority}>
           {list.tasks?.length > 0 && (
             <ToggleList.Item value={list.priority} title={list.title}>
-              <div className='bg-[#F2F4F6] rounded-lg flex flex-col gap-4 p-4'>
+              <div
+                className={cn(
+                  'bg-gray-100 rounded-lg flex flex-col gap-4 p-4',
+                  list.priority === 'high' && 'bg-high-priority-light',
+                  list.priority === 'medium' && 'bg-medium-priority-light',
+                  list.priority === 'low' && 'bg-low-priority-light'
+                )}
+              >
                 {list.tasks.map((task) => (
                   <TaskItem
                     key={task.id}
@@ -42,7 +51,7 @@ const Tasks = ({ tasks }: TasksProps) => {
               </div>
             </ToggleList.Item>
           )}
-        </>
+        </Fragment>
       ))}
     </ToggleList>
   );
